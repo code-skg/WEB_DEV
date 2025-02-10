@@ -1,14 +1,31 @@
 h1 {
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
-    flex-direction: centre ;
+    text-align: justify;
+    font-size: 30px;
+    font-style: arial;
 }
 p {
+        
     color: #000;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(237, 156, 156);
+    text-align: justify;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
-button {
+    
+h3 {
+    color : black;
+    background-color: rgb(155, 252, 255) ;
+    text-align: justify;
+}
+h4 {
     color : white;
     background-color: black ;
+    text-align: justify;
+}
+h5 {
+    color : white;
+    background-color: black ;
+    text-align: justify;
 }
