@@ -1,0 +1,31 @@
+.para{
+    height: 400px;
+    
+    background-color: rgb(240, 217, 89);
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    margin:100px;
+    padding: 100px;
+    border-left-color: aqua;
+    border-left-style: dashed;
+    border-radius: 50px;
+    text-size-adjust: auto;
+    
+    
+}
+
+#id {
+   
+    font-weight: 700;
+    font-size: 33px;
+    margin: 100px;
+    background: white;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(222, 49, 144);
+    padding: 100px;
+    cursor: pointer;
+    border-radius: 10%;
+}
+  

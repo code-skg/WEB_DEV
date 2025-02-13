@@ -13,6 +13,33 @@ p + p{
 a {
     text-decoration: none;
 }
- p +h3 {
+h3 {
     color: firebrick;
+}
+input[type= "text"]{
+    color: darkred;
+}
+input[type= "password"]{
+    color: rgb(76, 84, 238);
+}
+
+button:hover {
+    background: #d1ff19;
+    columns: red
+    ;
+}
+button:active {
+    background: #192eec;
+    columns: rgb(255, 43, 43)
+    ;
+}
+h1::first-letter{
+    color : black;
+}
+h3::selection {
+    background-color: rgb(156, 215, 47);
+}
+
+h3 {
+    color: rgb(27, 27, 255);
 }
