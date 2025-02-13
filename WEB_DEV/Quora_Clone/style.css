@@ -1,33 +1,18 @@
+body div h1 {
+    color : #b92b27;
+}
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+.
+button{
+    background-color: rgba(255, 217, 0, 0.951);
 }
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+p + p{
+    color: red;
+    text-decoration: underline;
 }
-.login {
-    display: flex;
-    gap: 10px;
-}
-.menu {
-    margin: 10px 0;
-}
-.menu a {
-    margin-right: 10px;
-    text-decoration: none;
-    color: blue;
-}
-.question {
-    border-top: 1px solid black;
-    padding: 10px 0;
-}
-.follow {
-    color: blue;
+a {
     text-decoration: none;
 }
-.actions button {
-    margin-right: 5px;
+ p +h3 {
+    color: firebrick;
 }
