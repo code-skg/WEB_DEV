@@ -1,0 +1,16 @@
+.box {
+    width: 100px;
+    height: 100px;
+    transition:  box-shadow 0.5s ease 0.5s;
+    background-color: blue;
+    /* Transition: animate changes to the transform property over 0.5 seconds with an 'ease' curve */
+    transition: transform 0.5s ease;
+    margin-left: 50%;
+    margin-top: 25%;
+    box-shadow: 5px 5px 5px rgb(85, 82, 82);
+  }
+  .box:hover {
+    /* Transform: rotate by 45° and scale up by 20% */
+    transform:  scale(1.2) ;
+    box-shadow: 10px 10px 8px black;
+  }
