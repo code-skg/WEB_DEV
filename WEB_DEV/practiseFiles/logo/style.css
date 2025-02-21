@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@700&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ED1651; /* Background color */
+    margin: 0;
+}
+
+.logo {
+    position: relative;
+    font-family: 'Times New Roman', serif;
+}
+
+.letter {
+    font-size: 200px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.text {
+    position: absolute;
+    left: 40px;
+    top: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    transform: rotate(-90deg);
+    z-index: 3;
+}
+
+.letter::after {
+    content: 'D';
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    font-size: 200px;
+    font-weight: bold;
+    color: #00AEEF; /* Blue shadow effect */
+    z-index: 1;
+}

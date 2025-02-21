@@ -1,0 +1,37 @@
+div{
+    border-radius: 5px;
+}
+   
+
+#box{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    margin: 20px;
+    
+    box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.5);
+    transition: transform 0.21s ease-in-out, box-shadow 0.1s ease-in;
+   
+}
+#box:hover{
+    box-shadow:5px 5px 15px grey;
+    transform: scale(1.08);
+    text-shadow: 2px 2px 5px rgb(215, 215, 215);
+}
+.data{
+    height: 50%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.card{
+
+    height: 50%;
+    background-image: url(img1.jpg);
+    background-size: cover;
+    font-size: medium;
+    
+}
