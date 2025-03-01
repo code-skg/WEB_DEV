@@ -1,1 +1,1 @@
-console.log(arr1)
+stopTimer();

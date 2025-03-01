@@ -1,8 +1,23 @@
-let arr1 = [1,2,3,4];
-let arr2 = [1,2,3,4];
-let arr3 = arr1; 
-arr1.push(3);
-console.log(arr1);//prints [1,2,3,4,3]
-console.log(arr3);// also prints [1,2,3,4,3]
-// beacuse both are refrencing the same array here ; 
-//so changes reflecs in both the arrat; 
+let myPromise = new Promise((resolve, reject) => {
+    let success = true; // Simulate success/failure
+
+    setTimeout(() => {
+        if (success) {
+            resolve("Operation Successful!"); // Fulfilled
+        } else {
+            reject("Operation Failed!"); // Rejected
+        }
+    }, 2000);
+});
+
+// Consuming the Promise
+myPromise
+    .then((message) => {
+        console.log("Success:", message); // Runs if resolved
+    })
+    .catch((error) => {
+        console.log("Error:", error); // Runs if rejected
+    })
+    .finally(() => {
+        console.log("Promise completed!"); // Runs no matter what
+    });
