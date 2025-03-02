@@ -1,1 +1,1 @@
-stopTimer();
+.then() 
