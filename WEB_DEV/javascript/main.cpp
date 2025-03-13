@@ -13,7 +13,7 @@ void fun1 (){
 
 int main (){
     fun1();
-    fun2();
+   
 
 
     return 0 ;
