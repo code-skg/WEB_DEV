@@ -6,7 +6,7 @@
 // }
 // fuxn(greet);
 // let myPromise = new Promise((resolve, reject) => {
-//     let success = true; // Change to false to see rejection
+//     let success = 0; // Change to false to see rejection
 //     setTimeout(() => {
 //         if (success) {
 //             resolve("Data fetched successfully!");
@@ -75,49 +75,54 @@
 
 
 
-// Real-time API call
-async function getCoordinates(city) {
-    try {
-        let geoResponse = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1&language=en&format=json`);
-        let geoData = await geoResponse.json();
+// // Real-time API call
+// async function getCoordinates(city) {
+//     try {
+//         let geoResponse = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1&language=en&format=json`);
+//         let geoData = await geoResponse.json();
         
-        if (!geoData.results || geoData.results.length === 0) {
-            throw new Error("City not found! ❌");
-        }
+//         if (!geoData.results || geoData.results.length === 0) {
+//             throw new Error("City not found! ❌");
+//         }
 
-        let { latitude: lat, longitude: lon } = geoData.results[0];  // Extract latitude & longitude
-        console.log(`📍 Coordinates for ${city}: ${lat}, ${lon}`);
+//         let { latitude: lat, longitude: lon } = geoData.results[0];  // Extract latitude & longitude
+//         console.log(`📍 Coordinates for ${city}: ${lat}, ${lon}`);
         
-        return { lat, lon };  // Pass data to the next function
-    } catch (error) {
-        console.error("Error fetching coordinates:", error);
-    }
-}
+//         return { lat, lon };  // Pass data to the next function
+//     } catch (error) {
+//         console.error("Error fetching coordinates:", error);
+//     }
+// }
 
-async function getWeather(lat, lon) {
-    try {
-        let weatherResponse = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`);
-        let weatherData = await weatherResponse.json();
+// async function getWeather(lat, lon) {
+//     try {
+//         let weatherResponse = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`);
+//         let weatherData = await weatherResponse.json();
 
-        if (!weatherData.current_weather) {
-            throw new Error("Weather data not found! ❌");
-        }
+//         if (!weatherData.current_weather) {
+//             throw new Error("Weather data not found! ❌");
+//         }
 
-        console.log(`🌡 Temperature: ${weatherData.current_weather.temperature}°C`);
-        console.log(`💨 Wind Speed: ${weatherData.current_weather.windspeed} km/h`);
+//         console.log(`🌡 Temperature: ${weatherData.current_weather.temperature}°C`);
+//         console.log(`💨 Wind Speed: ${weatherData.current_weather.windspeed} km/h`);
 
-    } catch (error) {
-        console.error("Error fetching weather:", error);
-    }
-}
+//     } catch (error) {
+//         console.error("Error fetching weather:", error);
+//     }
+// }
 
-async function fetchWeatherForCity(city) {
-    let coordinates = await getCoordinates(city);
-    if (coordinates) {
-        await getWeather(coordinates.lat, coordinates.lon);  // Pass values to the next API call
-    }
-}
+// async function fetchWeatherForCity(city) {
+//     let coordinates = await getCoordinates(city);
+//     if (coordinates) {
+//         await getWeather(coordinates.lat, coordinates.lon);  // Pass values to the next API call
+//     }
+// }
 
-// 🔥 Test with a city name
-fetchWeatherForCity("patna")
+// // 🔥 Test with a city name
+// fetchWeatherForCity("patna")
+
+
+
+
+
 
