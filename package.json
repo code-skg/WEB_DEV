@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/code-skg/WEB_DEV/issues"
   },
-  "homepage": "https://github.com/code-skg/WEB_DEV#readme"
+  "homepage": "https://github.com/code-skg/WEB_DEV#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
