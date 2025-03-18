@@ -62,4 +62,16 @@ html , body {
     font-size: 15px;
 
 }
+#smallheading{
+    text-transform: uppercase;
+    padding-top: 145px;
+    padding-right: 20px;
+    
+}
+#smallheading h5 {
+    text-align: right;
+    padding: 2px;
+    font-size: 15px;
+}
+
 
