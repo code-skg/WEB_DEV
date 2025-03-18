@@ -32,7 +32,8 @@ html , body {
 #nav a {
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 17px;
+    font-weight: 500
 }
 #heading {
     margin-top: 30px;
@@ -73,5 +74,61 @@ html , body {
     padding: 2px;
     font-size: 15px;
 }
+#herofotter{
+    position: absolute;
+    width: 100%;
+    bottom: 3%;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+    
+
+}
+#herofotter a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 1px;
+}
+#iconset {
+    align-items: inline;
+}
+
+/* second page  */
+
+
+#second {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 12vw;
+    width:100%;
+    background-color: #000;
+    height: 100vh;
+}
+
+.ele {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-top: 1px solid #888;
+    color: white ;
+    opacity: 0.8;
+    
+}
+
+.ele h1 {
+    padding: 5%  0px ;
+    text-transform: uppercase;
+    color: white ;
+    opacity: 0.8;
+    font-size: 7vw;
+}
+.ele h4 {
+    color: white;
+}
 
