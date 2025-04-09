@@ -11,7 +11,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
-const words = ["a Developer", "an AI Enthusiast", "a Learner", "a Problem Solver"];
+const words = [" a Web Developer", " an AI Enthusiast", " a Learner "," Coder", " a Problem Solver"];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
