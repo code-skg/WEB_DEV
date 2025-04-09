@@ -3,53 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Portfolio</title>
+  <title>Satyam Kumar | Portfolio</title>
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-  <!-- header intro -->
   <div class="header">    
-      <nav>
-        <h1>Satyam Kumar</h1>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <nav>
+      <h1>Satyam Kumar</h1>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#l">Projects</a></li>
+        <li><a href=#">Contact</a></li>
+      </ul>
+    </nav>
   </div>
 
-  <div id="hero">
-    <h2>Hello, I'm Satyam Kumar</h2>
-    <p>Aspiring Software Engineer & Web Developer</p>
-  </div>
+  <div class="hero">
+    <div id="intro">
+      <h1>Hi, I am Satyam Kumar</h1>   
+    </div>
 
-  <hr>
-
-  <div id="aboutt">
-    <h2>About Me</h2>
-    <p>Write a short bio here. Mention your college, interests, and what you're learning.</p>
-  </div>
-
-  <hr>
-
-  <div id="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <img src="assets/project1.png" alt="Project 1" />
-      <h3>Project Title</h3>
-      <p>Short description of what this project does.</p>
+    <div id="img">
+      <h1>hi hello </h1>
     </div>
   </div>
-<hr>
-  <div id="contact">
-    <h2>Contact</h2>
-    <p>Email: your.email@example.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">yourprofile</a></p>
-  </div>
-  
+  <hr>
+
   <footer>
     <p>&copy; 2025 Satyam Kumar</p>
   </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.querySelector('nav ul');
+  
+    // Toggle menu on hamburger click
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation(); // prevent the event from bubbling up to document
+      menu.classList.toggle('show');
+    });
+  
+    // Close menu when clicking outside of it
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+        menu.classList.remove('show');
+      }
+    });
+  </script>
+  
 </body>
 </html>

@@ -1,19 +1,27 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
   line-height: 1.6;
-  background: #f9f9f9;
+  background: #f2f2f2;
   color: #333;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color:  #f2f2f2;
 }
 
 .header {
   background: #222;
-  color: white;
+  color: #f2f2f2;
   padding: 1rem;
 }
 
@@ -21,6 +29,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 nav ul {
@@ -32,16 +41,75 @@ nav ul {
 nav a {
   color: white;
   text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
-#hero {
-  padding: 2rem;
+nav a:hover {
+  color: #00DCFF;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #3d3c3c81;
+    position: absolute;
+    top: 67px;
+    right: 0;
+    width: 50%;
+    padding: 2rem 2rem;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.hero {
+  height: 90vh;
   text-align: center;
-  background: #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-section {
+.hero #intro {
+  width: 50%;
+  height: 100%;
+  background-color: #00DCFF;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero #img {
+  width: 50%;
+  height: 100%;
+  background-color: #ffca4b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about, #projects, #contact {
   padding: 2rem;
+  background-color: #fff;
+  margin: 2rem 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .project-card {
@@ -49,6 +117,8 @@ section {
   padding: 1rem;
   border: 1px solid #ddd;
   margin-top: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 footer {
