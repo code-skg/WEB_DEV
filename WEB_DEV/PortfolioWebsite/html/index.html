@@ -7,77 +7,24 @@
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-  <div class="header">    
-    <nav>
-      <h1>Satyam Kumar</h1>
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  <div class="main">
+    <div>
+     
+      <h1><strong> SATYAM KUMAR</strong></h1>
+    </div>
+    
+    <div>
+      <H2>I'm <span id="typing-text"></span></H2>
+    </div>
+   
+    <div id="nav">
       <ul>
         <li><a href="/html/about.html">About</a></li>
         <li><a href="/html/project.html">Projects</a></li>
         <li><a href="/html/contact.html">Contact</a></li>
       </ul>
-    </nav>
-  </div>
-
-  <div class="hero">
-    <div id="intro">
-      <h1>Hi, I am <span id="typing-text"></span></h1>   
     </div>
   </div>
   
-  <hr>
-
-  <footer>
-    <p>&copy; 2025 Satyam Kumar</p>
-  </footer>
-
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.querySelector('nav ul');
-
-    toggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      menu.classList.toggle('show');
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!menu.contains(e.target) && !toggle.contains(e.target)) {
-        menu.classList.remove('show');
-      }
-    });
-
-    const words = ["a Developer", "an AI Enthusiast", "a Problem Solver", "a Learner"];
-    let currentWordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    const textElement = document.getElementById("typing-text");
-
-    function typeEffect() {
-      const currentWord = words[currentWordIndex];
-
-      if (isDeleting) {
-        charIndex--;
-      } else {
-        charIndex++;
-      }
-
-      textElement.textContent = currentWord.substring(0, charIndex);
-
-      let typingSpeed = isDeleting ? 50 : 100;
-
-      if (!isDeleting && charIndex === currentWord.length) {
-        typingSpeed = 1000;
-        isDeleting = true;
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        currentWordIndex = (currentWordIndex + 1) % words.length;
-        typingSpeed = 500;
-      }
-
-      setTimeout(typeEffect, typingSpeed);
-    }
-
-    typeEffect();
-  </script>
 </body>
 </html>
