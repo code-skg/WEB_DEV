@@ -86,23 +86,15 @@ nav a:hover {
 }
 
 .hero #intro {
-  width: 50%;
+  width: 100%;
   height: 100%;
-  background-color: #00DCFF;
+  background-color: #add8dcdc;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.hero #img {
-  width: 50%;
-  height: 100%;
-  background-color: #ffca4b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 #about, #projects, #contact {
   padding: 2rem;

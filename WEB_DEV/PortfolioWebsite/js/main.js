@@ -1,57 +1,47 @@
-/*===== MENU SHOW =====*/ 
-const showMenu = (toggleId, navId) =>{
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
+const toggle = document.getElementById('menu-toggle');
+const menu = document.querySelector('nav ul');
 
-    if(toggle && nav){
-        toggle.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
-        })
-    }
-}
-showMenu('nav-toggle','nav-menu')
-
-/*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link')
-
-function linkAction(){
-    const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show-menu class
-    navMenu.classList.remove('show')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
-
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
-
-const scrollActive = () =>{
-    const scrollDown = window.scrollY
-
-  sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight,
-              sectionTop = current.offsetTop - 58,
-              sectionId = current.getAttribute('id'),
-              sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
-        
-        if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
-            sectionsClass.classList.add('active-link')
-        }else{
-            sectionsClass.classList.remove('active-link')
-        }                                                    
-    })
-}
-window.addEventListener('scroll', scrollActive)
-
-/*===== SCROLL REVEAL ANIMATION =====*/
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '60px',
-    duration: 2000,
-    delay: 200,
-//     reset: true
+// Toggle menu on hamburger click
+toggle.addEventListener('click', (e) => {
+  e.stopPropagation(); // prevent the event from bubbling up to document
+  menu.classList.toggle('show');
 });
 
-sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
-sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
-sr.reveal('.home__social-icon',{ interval: 200}); 
-sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+// Close menu when clicking outside of it
+document.addEventListener('click', (e) => {
+  if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+    menu.classList.remove('show');
+  }
+});
+
+// Typing text animation
+const words = ["a Developer","Coder" ,"an AI Enthusiast", "a Problem Solver", "a Learner"];
+let currentWordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const textElement = document.getElementById("typing-text");
+
+function typeEffect() {
+  const currentWord = words[currentWordIndex];
+
+  if (isDeleting) {
+    charIndex--;
+  } else {
+    charIndex++;
+  }
+
+  textElement.textContent = currentWord.substring(0, charIndex);
+
+  if (!isDeleting && charIndex === currentWord.length) {
+    isDeleting = true;
+    setTimeout(typeEffect, 200);
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    currentWordIndex = (currentWordIndex + 1) % words.length;
+    setTimeout(typeEffect, 200);
+  } else {
+    setTimeout(typeEffect, isDeleting ? 50 : 50);
+  }
+}
+
+typeEffect();
