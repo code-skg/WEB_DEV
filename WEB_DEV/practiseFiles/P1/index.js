@@ -69,21 +69,66 @@
 // }
 // console.log(stringRevesal("JavaScript"));
 
-function additon (a , b ){
-    return a+b;
-}
-function subtraction  (a , b ){
-    return a-b;
-}
-function multiplication (a , b ){
-    return a*b;
-}
-function division (a , b ){
-    return a/b;
-}
-let calculate = (a , b , callback) => {
-    return callback(a, b);
-}
-console.log(calculate (5,3 , multiplication));
+// function additon (a , b ){
+//     return a+b;
+// }
+// function subtraction  (a , b ){
+//     return a-b;
+// }
+// function multiplication (a , b ){
+//     return a*b;
+// }
+// function division (a , b ){
+//     return a/b;
+// }
+// let calculate = (a , b , callback) => {
+//     return callback(a, b);
+// }
+// console.log(calculate (5,3 , multiplication));
 
  
+
+// let arr = [11,2,3,10,5,6];
+// console.log(arr.sort((a,b) => a-b));//acending order
+
+
+// let details = {
+//     name: "Satyam Kumar" , 
+//     age : 18 , 
+//     isStudent : false ,
+//     greet(){
+//         return " Hi , Mr." + this.name;
+//     }
+
+// };
+
+// console.log(details.greet());
+
+
+// Product manager
+
+
+
+const productManager = {
+    products: [],
+  
+    addProduct(product) {
+      this.products.push(product);
+    },
+  
+    removeProduct(id) {
+      this.products = this.products.filter(product => product.id !== id);
+    },
+  
+    getProducts() {
+      return this.products;
+    }
+  };
+  
+  // Example Usage:
+  productManager.addProduct({ id: 1, name: "Laptop", price: 1000 });
+  productManager.addProduct({ id: 2, name: "Smartphone", price: 500 });
+  console.log(productManager.getProducts());  // List of 2 products
+  productManager.removeProduct(1);
+  console.log(productManager.getProducts());  // List with only the smartphone
+  
