@@ -109,26 +109,33 @@
 
 
 
-const productManager = {
-    products: [],
+// const productManager = {
+//     products: [],
   
-    addProduct(product) {
-      this.products.push(product);
-    },
+//     addProduct(product) {
+//       this.products.push(product);
+//     },
   
-    removeProduct(id) {
-      this.products = this.products.filter(product => product.id !== id);
-    },
+//     removeProduct(id) {
+//       this.products = this.products.filter(product => product.id !== id);
+//     },
   
-    getProducts() {
-      return this.products;
-    }
-  };
+//     getProducts() {
+//       return this.products;
+//     }
+//   };
   
-  // Example Usage:
-  productManager.addProduct({ id: 1, name: "Laptop", price: 1000 });
-  productManager.addProduct({ id: 2, name: "Smartphone", price: 500 });
-  console.log(productManager.getProducts());  // List of 2 products
-  productManager.removeProduct(1);
-  console.log(productManager.getProducts());  // List with only the smartphone
+//   // Example Usage:
+//   productManager.addProduct({ id: 1, name: "Laptop", price: 1000 });
+//   productManager.addProduct({ id: 2, name: "Smartphone", price: 500 });
+//   console.log(productManager.getProducts());  // List of 2 products
+//   productManager.removeProduct(1);
+//   console.log(productManager.getProducts());  // List with only the smartphone
   
+const header = document.getElementById('header');
+console.log(header.textContent);
+
+
+
+
+
