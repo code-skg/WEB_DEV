@@ -5,44 +5,107 @@
     box-sizing: border-box;
   }
   
-  body {
+  html ,body {
+
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    height: 100%;
+    width: 100%;
   }
-  
+  /* Header Section */
   header {
-    background: #1d3557;
-    padding: 20px;
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    padding: .8rem;
+    padding-right: 3rem;
+    padding-left: 1.2rem ;
     color: #fff;
     display: flex;
+    top: 0;
+    z-index: 1000;
     justify-content: space-between;
     align-items: center;
   }
-  
+  header img{  
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Makes the image circular */
+  }
+
   header nav ul {
     list-style: none;
     display: flex;
+    padding-right: 2rem;
   }
   
   header nav ul li {
-    margin-left: 20px;
+
+    border-radius: 6px;
+    padding: 5px 10px;
+    margin-left: 25px;
   }
   
   header nav ul li a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
   }
+  li:hover{
+      border: none;
+      background-color:#354765;
+    }
   
+  li:hover a {
+      color: white;
+    }
+  
+
+
   /* Hero Section */
   #hero {
-    background: url('../images/hero-banner.jpg') no-repeat center center/cover;
-    height: 400px;
-    color: #fff;
+    background: linear-gradient(to bottom, #E0F2FE, #76c8fe);
+    color: #000000;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-shadow: 1px 1px 2px #000;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
   }
   
+  .floating-img {
+    position: absolute; /* Allows positioning relative to the nearest positioned ancestor */
+    right: 0; /* Moves the image to the right edge of the container */
+    top: 50px;
+    /* padding-bottom: 10px; */
+    width: 842px; /* Adjust size as needed */
+    height: 676px;
+    animation: floatY 3s ease-in-out infinite alternate; /* Smooth float animation */
+  }
+.move-in-small-screen {
+    position: absolute;
+    height: 170px;
+    width: 200px;
+    transform: rotate(-30deg);
+    top: 80px; /* Position 100px from the top */
+    right: 50%;
+    
+}
+
+
+  /* smooth float animation */
+  @keyframes floatY {
+    0% {
+      transform: translateY(-20px);
+    }
+    /* 50% {
+      transform: translateY(0);
+    } */
+    100% {
+      transform: translateY(30px);
+    }
+  }
